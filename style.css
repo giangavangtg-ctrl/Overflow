@@ -1,0 +1,66 @@
+/* Đã sửa lỗi cú pháp: đổi '-' thành '*' để áp dụng box-sizing cho mọi phần tử */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Container bọc 2 cột */
+.container {
+    width: 100%;
+    margin-bottom: 20px;
+    /* Có thể dùng overflow: hidden; ở đây như một cách khác để clear float cho thẻ cha */
+}
+
+.left-column {
+    width: 50%;
+    float: left; /* Đẩy phần tử sang trái */
+    background-color: lightgray;
+    padding: 20px;
+    border: 1px solid #999;
+}
+
+.right-column {
+    width: 50%;
+    float: right; /* Đẩy phần tử sang phải */
+    background-color: lightgreen;
+    padding: 20px;
+    border: 1px solid #77b877;
+}
+
+/* Sử dụng clear để xóa bỏ ảnh hưởng của thẻ float phía trên đối với các phần tử phía dưới */
+.clear {
+    clear: both; 
+}
+
+/* Hộp có chiều cao cố định để kiểm tra thanh cuộn */
+.overflow-box {
+    width: 300px;
+    height: 100px; /* Chiều cao cố định ngắn hơn nội dung */
+    background-color: lightcoral;
+    padding: 10px;
+    margin: 20px auto; /* Căn giữa hộp */
+    overflow: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá kích thước hộp */
+    border: 2px solid #b73a3a;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #555;
+    font-size: 14px;
+}
